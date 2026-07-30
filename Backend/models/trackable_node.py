@@ -49,15 +49,21 @@ class DummyNode(TrackableNode):
         return random.choice(["In Progress", "Completed", "Pending", "Failed"])
 
 
-s1 = DummyNode('Task 1')
-# t1 = TrackableNode('Task 1')
-# print(t1.name)
-# print(t1.progress)
-# print(t1.status)
-print(s1.name)
-print(s1 == s1)
-print(s1 == DummyNode('Task 1'))
-print(s1 == DummyNode('Task 2'))
-print(s1.progress)
-print(s1.status)
-print(s1)
+
+
+# ==========
+# TEST CASES
+# ==========
+
+# s1 = DummyNode('Maths')
+# # t1 = TrackableNode('Task 1')
+# # print(t1.name)
+# # print(t1.progress)
+# # print(t1.status)
+# print(s1.name)
+# print(s1 == s1)
+# print(s1 == DummyNode('Task 1'))
+# print(s1 == DummyNode('Task 2'))
+# print(s1.progress)
+# print(s1.status)
+# print(s1)
