@@ -65,3 +65,16 @@ class Subject(TrackableNode):
     def __repr__(self):
         return f"Subject name = {self.name} progress = {self.progress} topics = {len(self._topics)}"
 
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "description": self._description,
+            "topics": [t.to_dict() for t in self._topics]
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        obj = cls(data["name"], data["description"])
+        for t_data in data["topics"]:
+            obj.add_topic(Topic.from_dict(t_data))
+        return obj

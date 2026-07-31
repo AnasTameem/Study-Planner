@@ -65,3 +65,17 @@ class Topic(TrackableNode):
         return f"Topic name = {self.name} progress = {self.progress} subtopics = {len(self._subtopics)}"
 
 
+    def to_dict(self):
+        return {
+        "name": self.name,
+        "description": self._description,
+        "subtopics": [st.to_dict() for st in self._subtopics]
+    }
+
+
+    @classmethod
+    def from_dict(cls, data):
+        obj = cls(data["name"], data["description"])
+        for st_data in data["subtopics"]:
+            obj.add_subtopic(SubTopic.from_dict(st_data))
+        return obj

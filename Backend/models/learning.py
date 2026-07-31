@@ -70,3 +70,18 @@ class Learning(TrackableNode):
     def __repr__(self):
         return f"Learning name = {self.name} progress = {self.progress} subjects = {len(self._subjects)}"
 
+    def to_dict(self):
+        return {
+        "name": self.name,
+        "description": self._description,
+        "day_started": self._day_started.isoformat(),   # date -> string, e.g. "2026-07-31"
+        "subjects": [s.to_dict() for s in self._subjects]
+    }
+
+    @classmethod
+    def from_dict(cls, data):
+        obj = cls(data["name"], data["description"])
+        obj._day_started = date.fromisoformat(data["day_started"])   # string -> date, overwriting the auto-set today()
+        for s_data in data["subjects"]:
+            obj.add_subject(Subject.from_dict(s_data))
+        return obj

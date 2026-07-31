@@ -39,3 +39,16 @@ class SubTopic(TrackableNode):
         return f"<{self.__class__.__name__} name='{self.name}' done={self._done}>"
 
 
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "detail": self._detail,
+            "done": self._done
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        obj = cls(data["name"], data["detail"])
+        if data["done"]:
+            obj.mark_done()
+        return obj
