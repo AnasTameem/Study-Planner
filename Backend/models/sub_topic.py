@@ -39,20 +39,3 @@ class SubTopic(TrackableNode):
         return f"<{self.__class__.__name__} name='{self.name}' done={self._done}>"
 
 
-
-# ==========
-# TEST CASES
-# ==========
-
-
-# s1 = SubTopic("Vecotrs", "intro to vectors")
-# print(s1.progress)
-# print(s1.status)
-
-# s1.mark_done()
-# print(s1.progress)
-# print(s1.status)
-
-# print(s1.detail)
-
-# s2 = SubTopic("", "x")
