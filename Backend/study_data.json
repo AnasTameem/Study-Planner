@@ -1,0 +1,38 @@
+{
+  "learnings": [
+    {
+      "name": "Agentic AI",
+      "description": "",
+      "day_started": "2026-08-06",
+      "subjects": [
+        {
+          "name": "python",
+          "description": "",
+          "topics": [
+            {
+              "name": "fundamentals",
+              "description": "",
+              "subtopics": [
+                {
+                  "name": "data types",
+                  "detail": "",
+                  "done": false
+                },
+                {
+                  "name": "oops",
+                  "detail": "",
+                  "done": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LLM",
+          "description": "",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

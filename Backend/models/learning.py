@@ -54,12 +54,12 @@ class Learning(TrackableNode):
         self._subjects.remove(subject)
 
 
-    def reorder_subjects(self, new_order):
-        new_list = []
-        for name in new_order:
-            found = self.get_subject(name)
-            new_list.append(found)
-        self._subjects = new_list
+    # def reorder_subjects(self, new_order):
+    #     new_list = []
+    #     for name in new_order:
+    #         found = self.get_subject(name)
+    #         new_list.append(found)
+    #     self._subjects = new_list
 
     def __len__(self):
         return len(self._subjects)

@@ -29,12 +29,12 @@ class StudyTracker:
         learning = self.get_learning(name)
         self._learnings.remove(learning)
 
-    def reorder_learnings(self, new_order):
-        new_list = []
-        for name in new_order:
-            found = self.get_learning(name)
-            new_list.append(found)
-        self._learnings = new_list
+    # def reorder_learnings(self, new_order):
+    #     new_list = []
+    #     for name in new_order:
+    #         found = self.get_learning(name)
+    #         new_list.append(found)
+    #     self._learnings = new_list
 
     def __len__(self):
         return len(self._learnings)

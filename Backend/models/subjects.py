@@ -49,12 +49,12 @@ class Subject(TrackableNode):
         self._topics.remove(topic)
 
 
-    def reorder_topics(self, new_order):
-        new_list = []
-        for name in new_order:
-            found = self.get_topic(name)
-            new_list.append(found)
-        self._topics = new_list
+    # def reorder_topics(self, new_order):
+    #     new_list = []
+    #     for name in new_order:
+    #         found = self.get_topic(name)
+    #         new_list.append(found)
+    #     self._topics = new_list
 
     def __len__(self):
         return len(self._topics)
